@@ -152,7 +152,7 @@ split-dbt-router-starter
 ```yaml
 # 数据库路由配置
 split-database-table:
-  db:
+  sdt:
     router:
       groups:
         # 组1：单数据源（不分库分表）
