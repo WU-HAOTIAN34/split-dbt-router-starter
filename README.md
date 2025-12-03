@@ -161,7 +161,7 @@ split-database-table:
           data-source:
             db01:
               driver-class-name: com.mysql.cj.jdbc.Driver
-              url: jdbc:mysql://localhost:3306/lottery?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+              url: jdbc:mysql://localhost:3306/dbA?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
               username: root
               password: password123
               
@@ -175,7 +175,7 @@ split-database-table:
           router-key: uId
           # 分表数量配置（表名: 分表数量）
           tb-counts:
-            user_strategy_export: 4
+            tableA: 4
             tableB: 
             ...
           # 数据源配置
@@ -183,13 +183,13 @@ split-database-table:
             # 第一个数据库
             db01:
               driver-class-name: com.mysql.cj.jdbc.Driver
-              url: jdbc:mysql://localhost:3306/lottery_01?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+              url: jdbc:mysql://localhost:3306/dbB?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
               username: root
               password: password123
             # 第二个数据库
             db02:
               driver-class-name: com.mysql.cj.jdbc.Driver
-              url: jdbc:mysql://localhost:3306/lottery_02?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+              url: jdbc:mysql://localhost:3306/dbC?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
               username: root
               password: password123
             db03:
